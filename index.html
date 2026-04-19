@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAIII!!!!</title>
+    <link rel="icon" href="https://i.imgur.com/QBfBGnt.gif">
+    <head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            line-height: 1.4;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #252525;
+            padding: 20px;
+            border-bottom: 3px solid #ff9d00;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff9d00;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        h3 {
+            color: #ff9d00;
+            font-size: 16px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 2px #0000005e;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 11px;
+            color: #777;
+            padding: 15px;
+        }
+        
+        iframe {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes flickerAnimation {
+        0%   { opacity:1; }
+        50%  { opacity:0; }
+        100% { opacity:1; }
+        50%  { opacity:0; }
+        0% { opacity:1; }
+        }
+
+        .flicker {
+        -webkit-animation: flickerAnimation 1s infinite;
+            animation: flickerAnimation 1s infinite;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            background: #1a1a1a;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .content {
+            display: table; 
+            width: 100%;
+            padding: 20px;
+        }
+
+        .section {
+            display: table-cell;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        .full-width {
+            display: block;
+            width: 100%;
+            clear: both;
+            padding: 15px 10px;
+        }
+
+        .box {
+            background: #222;
+            box-shadow: 0px 2px 5px 3px #0000002f;
+            border: 1px solid #333;
+            padding: 15px;
+            height: 100%;
+
+        }
+
+        .map-list {
+            list-style: none;
+            color: #ccc;
+        }
+
+        .map-list li {
+            padding: 4px 0;
+            border-bottom: 1px solid #2a2a2a;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .map-list li span {
+            color: #ff9d00;
+            margin-right: 8px;
+        }
+
+        .command-box {
+            background: #111;
+            padding: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+
+        .command-box-rtv {
+            background: #111;
+            border: 1px solid transparent; 
+            padding: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            transition: all 0.3s ease;
+        }
+
+        .command-box-monitoring {
+            background: #111;
+            border: 1px solid transparent; 
+            padding: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            transition: all 0.3s ease;
+        }
+
+        .command-box-vk {
+            background: #111;
+            border: 1px solid transparent;
+            padding: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            transition: all 0.3s ease;
+        }
+
+        .command-box-donate {
+            background: #111;
+            border: 1px solid transparent;
+            padding: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            transition: all 0.3s ease;
+        }
+
+        .command-box-rtv:hover {
+            border: 1px solid #ffffff;
+            box-shadow: 1px 1px 20px #ffffff;
+
+        }
+
+        .command-box-monitoring:hover {
+            border: 1px solid #b90e0e;
+            box-shadow: 1px 1px 20px #b90e0e;
+
+        }
+
+        .command-box-vk:hover {
+            border: 1px solid #5bb3ff;
+            box-shadow: 1px 1px 20px #5bb3ff;
+        }
+
+        .command-box-donate:hover {
+            border: 1px solid #ff9d00;
+            box-shadow: 1px 1px 20px #ff9d00;
+        }
+
+        .donation {
+            text-align: center;
+            border-top: 1px dashed #444;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+
+        .number {
+            font-family: monospace;
+            background: #111;
+            padding: 10px;
+            font-size: 11px;
+            word-break: break-all;
+            color: #aaa;
+            border: 1px solid #333;
+            margin-top: 10px;
+            border-right: 3px solid #ff9d00;
+            border-left: 3px solid #ff9d00;
+        }
+
+        .button {
+            display: block;
+            text-align: center;
+            background: #2AABEE;    
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: filter 0.2s ease; 
+        }
+
+
+        .button:hover {
+            box-shadow: 0px 0px 15px 2px #0000006e;
+            filter: brightness(1.3);
+        }
+
+        .button:active {
+            box-shadow: #00000000;
+            filter: brightness(0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>REALITY VANILLA PUBLIC</h1>
+            <div style="font-size: 14px; color: #888; font-weight: bold;">АВТОМАТИЧЕСКАЯ СМЕНА КАРТЫ КАЖДЫЕ 25 РАУНДОВ</div>
+        </header>
+
+        <div class="content">
+            <div class="section" style="width: 45%;">
+                <div class="box">
+                    <h3>ТЕКУЩИЙ ПУЛ КАРТ</h3>
+                    <ul class="map-list">
+                        <li><span>01.</span> cs_office</li>
+                        <li><span>02.</span> cs_assault</li>
+                        <li><span>03.</span> cs_italy</li>
+                        <li><span>04.</span> de_dust2</li>
+                        <li><span>05.</span> de_nuke</li>
+                        <li><span>06.</span> de_inferno</li>
+                        <li><span>07.</span> de_port</li>
+                        <li><span>08.</span> de_aztec</li>
+                    </ul>
+                </div>
+
+            <div style="margin-top: 20px;" class="box">
+                <h3>СТАТИСТИКА</h3>
+                <div>
+                <iframe src="https://www.gs4u.net/en/webmod/frame-map:120;splr:1;players:181;mfs:83;mac:6d6d6d;mahc:8f8f8f;sna:d59120;mbg:222222;bg:222222;fg:ffffff;snb:666666;itc:aaaaaa;shs:1;/s/422112.html" frameborder="0" scrolling="no" width="402" height="630" marginwidth="0" marginheight="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" style="width: 55%;">
+                <div class="box">
+                    <h3>Команды</h3>
+                    <p>Если есть желание сменить карту, можно воспользоваться командой:</p>
+                    <div style="border-left: 3px solid #fff;" class="command-box-rtv">!rtv</div>
+                    <p style="font-size: 12px; font-style: italic; color: #888;">за абьюз будет бан~ :3</p>
+                    <p style="margin-top: 20px; margin-bottom: 15px; color: #ff9d00; font-weight: bold; text-shadow: 2px 2px 2px #0000005e;">Команды на ссылки:</p>
+                    <p style="font-size: 15px; color: #e0e0e0;">Ссылка на <span style="font-weight: 600; text-shadow: 0px 0px 4px #ffffff49;">мониторинг:</span></p>
+                    <div style="border-left: 3px solid #b90e0e;" class="command-box-monitoring">!monitoring</div>
+                    <p style="font-size: 15px; color: #e0e0e0;">Ссылка на <span style="font-weight: 600; text-shadow: 0px 0px 4px #ffffff49;">вк:</span></p>
+                    <div style="border-left: 3px solid #5bb3ff;" class="command-box-vk" >!vk</div>
+                    <p style="font-size: 15px; color: #e0e0e0;">Адрес для <span style="font-weight: 600; text-shadow: 0px 0px 4px #ffffff49;">донатов:</span></p></p>
+                    <div style="border-left: 3px solid #ff9d00;" class="command-box-donate">!support</div>
+
+                    <h3 style="margin-top: 20px;">ссылки</h3>
+                    <p>Ресурсы связанные с сервером:</p>
+                    <a style="background: #4d7198;" href="" target="_blank" class="button">VK</a>
+                    <a style="background: #b90e0e;" href="" target="_blank" class="button">BattleMetrics</a>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;" class="box">
+                    <p>Отправить фидбек разработчикам >_<</p>
+                    <a style="background: #2AABEE;" href="" target="_blank" class="button">@AnonAskBot</a> </div>
+            </div>
+        </div>
+        
+        <p style="font-style: italic; text-align: center; size: 15px; color: #333; margin-top: 75px; user-select: none">。:*・°☆.。.:☆  under construction~ :3c  ☆.。.:*・°☆</p>
+        
+        <div class="full-width" style="margin-top: 55px;">
+            <div class="donation">
+                <h3 style="border: none;">Поддержка сервера</h3>
+                <p style="font-size: 13px; color: #FFFFFF; text-shadow: 0px 0px 4px #ffffff91;">Все ваши шекели с донатов пойдут на поддержание сервера <span style="color: #ff86a2; text-shadow: 0px 0px 4px #ff86a2;" class="flicker">&lt;3</span></p>
+                <div class="number"></div>
+            </div>
+        </div>
+        <!-- Yes, I'm using imgur to host images, how did you know? 
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣶⣤⣤⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⡿⠋⠉⠛⠛⠛⠿⣿⠿⠿⢿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⠟⠀⠀⠀⠀⠀⡀⢀⣽⣷⣆⡀⠙⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣷⠶⠋⠀⠀⣠⣤⣤⣉⣉⣿⠙⣿⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⠁⠀⠀⠴⡟⣻⣿⣿⣿⣿⣿⣶⣿⣦⡀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⠟⡿⠻⣿⠃⠀⠀⠀⠻⢿⣿⣿⣿⣿⣿⠏⢹⣿⣿⣿⢿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣼⣷⡶⣿⣄⠀⠀⠀⠀⠀⢉⣿⣿⣿⡿⠀⠸⣿⣿⡿⣷⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡿⣦⢀⣿⣿⣄⡀⣀⣰⠾⠛⣻⣿⣿⣟⣲⡀⢸⡿⡟⠹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠞⣾⣿⡛⣿⣿⣿⣿⣰⣾⣿⣿⣿⣿⣿⣿⣿⣿⡇⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⣿⡽⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠿⣍⣿⣧⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣷⣮⣽⣿⣷⣙⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣹⡿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡧⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡆⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣾⣿⣿⣿⣿⣿⣿⡶⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⡴⠞⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⣿⣿⣿⠿⣿⣿⠿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⢀⣠⣤⠶⠚⠉⠉⠀⢀⡴⠂⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⢀⣿⣿⠁⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠞⠋⠁⠀⠀⠀⠀⣠⣴⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠀⣾⣿⠋⠀⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⡀⠀⠀⢀⣷⣶⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣆⣼⣿⠁⢠⠃⠈⠓⠦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⣿⣿⡛⠛⠿⠿⠿⠿⠿⢷⣦⣤⣤⣤⣦⣄⣀⣀⠀⢀⣿⣿⠻⣿⣰⠻⠀⠸⣧⡀⠀⠉⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠛⢿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠙⠛⠿⣦⣼⡏⢻⣿⣿⠇⠀⠁⠀⠻⣿⠙⣶⣄⠈⠳⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠈⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⣐⠀⠀⠀⠈⠳⡘⣿⡟⣀⡠⠿⠶⠒⠟⠓⠀⠹⡄⢴⣬⣍⣑⠢⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢀⣀⠐⠲⠤⠁⢘⣠⣿⣷⣦⠀⠀⠀⠀⠀⠀⠙⢿⣿⣏⠉⠉⠂⠉⠉⠓⠒⠦⣄⡀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠈⣿⣿⣷⣯⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢦⣷⡀⠀⠀⠀⠀⠀⠀⠉⠲⣄⠀
+            ⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⠀⢹⣿⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⣷⣄⠀⠀⠀⠀⠀⠀⠈⠳
+            ⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⣸⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣽⡟⢶⣄⠀⠀⠀⠀⠀
+            ⠯⠀⠀⠀⠒⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡄⠈⠳⠀⠀⠀⠀
+            ⠀⠀⢀⣀⣀⡀⣼⣤⡟⣬⣿⣷⣤⣀⣄⣀⡀⠀⠀⠀⠀⠀⠀⠈⣿⣿⡄⣉⡀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⣿⣿⣄⠀⣀⣀⡀⠀ 
+    
+        -->
+        <footer style="border-top: 1px dashed #555; font-size: 15px;">ヘルガちゃんより愛を込めて (´｡• ᵕ •｡`) ♡</footer>
+        <a style="margin-left: 36%; margin-bottom: 5%;" href="https://web.archive.org/web/20050301073347/http://counter-strike.net/" target="_blank"> <img src="https://i.imgur.com/vGpcnmX.png"></a> 
+        <a href="https://www.youtube.com/watch?v=HHF0xlf-bjY" target="_blank"> <img src="https://i.imgur.com/J20ZOE9.png"></a> 
+        <a href="https://www.youtube.com/watch?v=oB5dctpeI0o" target="_blank"> <img src="https://i.imgur.com/f5WFN9q.png"></a>
+    </div>
+
+        <!-- я тебя люблю~~ -->
+        
+        <script>
+        const titles = [
+            "I LIKE KISSING BOYS!!!!",
+            "OOO YOU LIKE KISSING BOYS YOU'RE A BOYKISSER",
+            "YOU SMELL LIKE A FEMBOY UwU",
+            "YOU SMELL LIKE A FURRY UwU",
+            "WHAT IS THAT BULGE OwO",
+            "I WANNA LIVE UNDER YOUR TAIL~~",
+            "CAN I SNIFF YOU????",
+            "OOOOO A CUTE BOY!! HAIII!!!",
+            "CAN WE SLEEP TOGETHER THIS NIGHT??~",
+            "CAN I BE YOUR PET???",
+            "DO YOU LOVE ME???",
+            "IMMA BORROW YOURR CLOTHES BYYEEEEE!!!!",
+            "WANNA SEE ME NAKED??",
+            "DO YOU LIKE FURSUITS????",
+            "DO YOU HAVE A FURSUIT??",
+            "WHAT'S YOUR FAVORITE ANIME??",
+            "SAY MEOW!!!!",
+            "BE MY NEKOBOY~~",
+            "NICE THIGHS YOU GOT THERE OwO",
+            "DO YOU WEAR SKIRTS???",
+            "DO YOU LIKE THIGH HIGHS????",
+            "SHOW ME YOUR FURSONA UwU",
+            "TAKE OFF YOUR PANTS UwU"
+        ];
+
+        
+        function updateTabTitle() {
+            const randomIndex = Math.floor(Math.random() * titles.length);
+            document.title = titles[randomIndex];
+        }
+
+        setInterval(updateTabTitle, 1500);
+
+        </script>
+
+</body>
+</html>
